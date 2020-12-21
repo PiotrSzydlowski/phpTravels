@@ -8,7 +8,7 @@ import tests.TestBase;
 public class ChooseHotelTest extends TestBase {
 
     @Test
-    public void chooseHotelOption(){
+    public void chooseHotelOption() throws InterruptedException {
         AccountPage accountPage = new AccountPage();
         accountPage
                 .loginByCookie()
