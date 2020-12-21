@@ -14,7 +14,6 @@ public class PositiveLoginTest extends TestBase {
     @Test
     @Description("Cel testu: Poprawne zalogowanie użytkownika")
     @Severity(SeverityLevel.BLOCKER)
-    @TmsLink("Id-7")
     public void loginUser(){
         DriverUtils.navigateToPage(LOGIN_URL);
         final String FIRST_NAME = "JANUSZ";

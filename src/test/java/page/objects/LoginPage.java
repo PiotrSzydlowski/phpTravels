@@ -23,6 +23,7 @@ public class LoginPage extends BasePage{
 
     @Step("Wprowadzenie {username} do pola email")
     public LoginPage typeIntoFirstNameField(String username){
+        WaitForElement.waitUntilElementIsVisible(avatar);
         userNameLabel.sendKeys(username);
         return this;
     }
