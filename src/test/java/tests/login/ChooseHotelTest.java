@@ -5,13 +5,14 @@ import page.objects.AccountPage;
 import tests.TestBase;
 
 
-public class LoginByCookie extends TestBase {
+public class ChooseHotelTest extends TestBase {
 
     @Test
-    public void loginByCookie(){
+    public void chooseHotelOption(){
         AccountPage accountPage = new AccountPage();
         accountPage
                 .loginByCookie()
-                .assertThatGreentigMessageIsDisplayed("Hi, " + "JANUSZ" + " " + "KOWALSKI");
+                .assertThatGreentigMessageIsDisplayed("Hi, " + "JANUSZ" + " " + "KOWALSKI")
+                .backToLandingPage();
     }
 }
