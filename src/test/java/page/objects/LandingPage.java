@@ -24,5 +24,4 @@ public class LandingPage extends BasePage {
         loginLink.click();
         return new LoginPage();
     }
-
 }
