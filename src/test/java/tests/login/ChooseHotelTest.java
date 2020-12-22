@@ -13,6 +13,7 @@ public class ChooseHotelTest extends TestBase {
         accountPage
                 .loginByCookie()
                 .assertThatGreentigMessageIsDisplayed("Hi, " + "JANUSZ" + " " + "KOWALSKI")
-                .backToLandingPage();
+                .backToLandingPage()
+                .clickHotelNameFiled();
     }
 }

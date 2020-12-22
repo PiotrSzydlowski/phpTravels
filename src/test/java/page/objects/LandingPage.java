@@ -17,7 +17,7 @@ public class LandingPage extends BasePage {
     @FindBy(css = "#s2id_autogen8 > .select2-choice > .select2-chosen")
     private WebElement choseHotelNameFiled;
 
-    @FindBy(xpath = "")
+    @FindBy(className = "select2-chosen")
     private WebElement hotelNameField;
 
     public LandingPage clickOnMyAccountLink() {
@@ -31,8 +31,17 @@ public class LandingPage extends BasePage {
         return new LoginPage();
     }
 
-    public LandingPage clickHotelNameFiled(String nameHotel){
+    public LandingPage clickHotelNameFiled() throws InterruptedException {
         choseHotelNameFiled.click();
+        Thread.sleep(5000);
+        choseHotelNameFiled.sendKeys("Dubai");
+        return this;
+    }
+
+    public LandingPage senKeysToHotelField() throws InterruptedException {
+        System.out.println("SEND KEYS");
+        hotelNameField.sendKeys("Dubai");
+        Thread.sleep(5000);
         return this;
     }
 }
