@@ -18,17 +18,17 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            script { // Wygenerowanie raportu Allurowego
-                allure([
-                        includeProperties: false,
-                        jdk              : '',
-                        properties       : [],
-                        reportBuildPolicy: 'ALWAYS',
-                        results          : [[path: 'target/allure-results']]
-                ])
-            }
-        }
-    }
+//     post {
+//         always {
+//             script { // Wygenerowanie raportu Allurowego
+//                 allure([
+//                         includeProperties: false,
+//                         jdk              : '',
+//                         properties       : [],
+//                         reportBuildPolicy: 'ALWAYS',
+//                         results          : [[path: 'target/allure-results']]
+//                 ])
+//             }
+//         }
+//     }
 }
