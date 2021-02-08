@@ -1,6 +1,7 @@
 package driver;
 
 import configuration.LocalWebDriverProperties;
+import configuration.TestRunProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -80,17 +81,14 @@ public class BrowserFactory {
                 default:
                     throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
             }
-
         }
     }
 
     //Metoda zwraca nam obiekt RemoteWebDrivera na podstawie obiektu desiredCapabilities
     private WebDriver getRemoteWebDriver(DesiredCapabilities desiredCapabilities) {
         RemoteWebDriver remoteWebDriver = null;
-
-        //Zauważ, że RemoteWebDriver znajduje się w bloku try-catch. Wynika to z faktu, że obiekt URL rzuca wyjątkiem MalformedURLException
         try {
-            remoteWebDriver = new RemoteWebDriver(new URL("GRID_URL"), desiredCapabilities);
+            remoteWebDriver = new RemoteWebDriver(new URL(TestRunProperties.getGridUrl()), desiredCapabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to create RemoteWebDriver due to: " + e.getMessage());
@@ -99,20 +97,3 @@ public class BrowserFactory {
     }
 }
 
-//public class BrowserFactory {
-//    public static WebDriver getBrowser(BrowserType browserType) {
-//        switch (browserType) {
-//            case CHROME:
-//                System.setProperty("webdriver.chrome.driver", LocalWebDriverProperties.getChromeWebDriverLocation());
-//                return new ChromeDriver();
-//            case FIREFOX:
-//                System.setProperty("webdriver.gecko.driver",  LocalWebDriverProperties.getFirefoxWebDriverLocation());
-//                return new FirefoxDriver();
-//            case IE:
-//                System.setProperty("webdriver.ie.driver", LocalWebDriverProperties.getInternetExplorerWebDriverLocation());
-//                return new InternetExplorerDriver();
-//            default:
-//                throw new IllegalStateException("Unknown browser type! Please check your configuration");
-//        }
-//    }
-//}

@@ -7,7 +7,7 @@ import utils.DriverManager;
 
 public class WaitForElement {
     private static WebDriverWait getWebDriverWait() {
-        return new WebDriverWait(DriverManager.getWebDriver(), 10);
+        return new WebDriverWait(DriverManager.getWebDriver(), 15);
     }
 
     public static void waitUntilElementIsVisible(WebElement element){

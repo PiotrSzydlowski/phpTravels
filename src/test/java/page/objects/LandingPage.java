@@ -16,12 +16,14 @@ public class LandingPage extends BasePage {
 
     public LandingPage clickOnMyAccountLink() {
         WebElement myAccount = myAccountList.get(1);
+        log().info("Click on Account link");
         myAccount.click();
         return this;
     }
 
     public LoginPage clickOnLoginLink(){
         loginLink.click();
+        log().info("Click on Login link");
         return new LoginPage();
     }
 
