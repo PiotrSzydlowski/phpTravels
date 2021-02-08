@@ -15,7 +15,7 @@ public class ValidateIsConfirmPasswordIsTheSame extends TestBase {
     @Test
     @Description("Cel testu: Potwierdzenie walidacji jednakowych haseł w polach Password i Confirm Password ")
     @Severity(SeverityLevel.CRITICAL)
-    public void checkIfDangerMessageIsDisplayedAfterTypeIncorrectConfirmPassword(){
+    public void checkIfDangerMessageIsDisplayedAfterTypeIncorrectConfirmPassword() {
         final String FIRST_NAME = "JANUSZ";
         final String LAST_NAME = "KOWALSKI";
         DriverUtils.navigateToPage(REGISTRATION_URL);

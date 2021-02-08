@@ -16,7 +16,7 @@ public class ValidateIfUserCanRegisterMoreThanOneTimes extends TestBase {
     @Description("Cel testu: Potwierdzenie czy w przypadku próby zarejestrowania użytkownika z istniejącym już " +
             "zarejestrowanego wyświetlany jest komunikat ")
     @Severity(SeverityLevel.NORMAL)
-    public void checkIfDangerMessageIsDisplayed(){
+    public void checkIfDangerMessageIsDisplayed() {
         final String FIRST_NAME = "JANUSZ";
         final String LAST_NAME = "KOWALSKI";
         DriverUtils.navigateToPage(REGISTRATION_URL);

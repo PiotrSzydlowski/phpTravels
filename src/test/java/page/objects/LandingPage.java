@@ -32,18 +32,4 @@ public class LandingPage extends BasePage {
         log().info("Click on Login link");
         return new LoginPage();
     }
-
-    public LandingPage clickHotelNameFiled() throws InterruptedException {
-        choseHotelNameFiled.click();
-        Thread.sleep(5000);
-        choseHotelNameFiled.sendKeys("Dubai");
-        return this;
-    }
-
-    public LandingPage senKeysToHotelField() throws InterruptedException {
-        System.out.println("SEND KEYS");
-        hotelNameField.sendKeys("Dubai");
-        Thread.sleep(5000);
-        return this;
-    }
 }

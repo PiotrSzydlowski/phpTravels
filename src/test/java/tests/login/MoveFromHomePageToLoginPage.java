@@ -10,7 +10,7 @@ import tests.TestBase;
 public class MoveFromHomePageToLoginPage extends TestBase {
     @Test
     @Description("Cel testu: Poprawne przejście do strony Logowania")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.MINOR)
     public void logInByMovingFromHomePage() {
         LandingPage landingPage = new LandingPage();
         landingPage

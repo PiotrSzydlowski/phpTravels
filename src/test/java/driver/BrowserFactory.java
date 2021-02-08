@@ -34,29 +34,29 @@ public class BrowserFactory {
     //Metoda dostarcza obiekt WebDrivera
     public WebDriver getBrowser() {
 
-        //Sprawdzamy czy uruchomienie jest zdalne, jeśli tak to kod wejdzie do warunku
+        //Sprawdzenie czy uruchomienie jest zdalne, jeśli tak to kod wejdzie do warunku
         if (isRemoteRun) {
 
-            //Tworzymy obiekt desiredCapabilities, który jest wymagany do wyboru przeglądarki
+            //Tworzenie obiekt desiredCapabilities, który jest wymagany do wyboru przeglądarki
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
             //Wybór przeglądarki w zależności od wartości pola browserType
             switch (browserType) {
                 case CHROME:
 
-                    //Do wyboru przeglądarki Chrome używamy klasy ChromeOptions
+                    //Do wyboru przeglądarki Chrome - ChromeOptions
                     ChromeOptions chromeOptions = new ChromeOptions();
                     desiredCapabilities.merge(chromeOptions);
                     return getRemoteWebDriver(desiredCapabilities);
                 case FIREFOX:
 
-                    //Do wyboru przeglądarki FireFox używamy klasy FireFoxOptions
+                    //Do wyboru przeglądarki FireFox - FireFoxOptions
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     desiredCapabilities.merge(firefoxOptions);
                     return getRemoteWebDriver(desiredCapabilities);
                 case IE:
 
-                    //Do wyboru przeglądarki InternetExplorer używamy klasy InternetExplorerOptions
+                    //Do wyboru przeglądarki InternetExplorer - InternetExplorerOptions
                     InternetExplorerOptions internetExplorerOptions = new InternetExplorerOptions();
                     desiredCapabilities.merge(internetExplorerOptions);
                     return getRemoteWebDriver(desiredCapabilities);
@@ -67,7 +67,7 @@ public class BrowserFactory {
             //Jeśli uruchomienie nie jest zdalne, kod wchodzi do else. Jest to uruchomienie lokalne
         } else {
 
-            //Wybór przeglądarki w zależności od wartości pola browserType. Analogicznie jak wyżej
+            //Wybór przeglądarki w zależności od wartości pola browserType.
             switch (browserType) {
                 case CHROME:
                     System.setProperty("webdriver.chrome.driver", LocalWebDriverProperties.getChromeWebDriverLocation());
@@ -84,7 +84,7 @@ public class BrowserFactory {
         }
     }
 
-    //Metoda zwraca nam obiekt RemoteWebDrivera na podstawie obiektu desiredCapabilities
+    //Metoda zwraca obiekt RemoteWebDrivera na podstawie obiektu desiredCapabilities
     private WebDriver getRemoteWebDriver(DesiredCapabilities desiredCapabilities) {
         RemoteWebDriver remoteWebDriver = null;
         try {

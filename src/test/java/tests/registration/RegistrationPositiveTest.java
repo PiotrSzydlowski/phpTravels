@@ -19,7 +19,7 @@ public class RegistrationPositiveTest extends TestBase {
     @Test
     @Description("Cel testu: Poprawne zarejestrowanie nowego użytkownika")
     @Severity(SeverityLevel.BLOCKER)
-    public void registerNewUser(){
+    public void registerNewUser() {
         Faker faker = new Faker(new Locale("pl_PL"));
         final String FIRST_NAME = faker.name().firstName();
         final String LAST_NAME = faker.name().lastName();
@@ -37,6 +37,6 @@ public class RegistrationPositiveTest extends TestBase {
                 .clickOnSignUpButton();
         AccountPage accountPage = new AccountPage();
         accountPage
-        .assertThatGreentigMessageIsDisplayed("Hi, " + FIRST_NAME + " " + LAST_NAME);
+                .assertThatGreentigMessageIsDisplayed("Hi, " + FIRST_NAME + " " + LAST_NAME);
     }
 }

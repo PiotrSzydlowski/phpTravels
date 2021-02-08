@@ -13,9 +13,9 @@ import static navigation.ApplicationURLs.REGISTRATION_URL;
 
 public class ValidateLengthOfPassword extends TestBase {
     @Test
-    @Description("Cel testu: Potwierdzenie czy system waliduje długość wprowadzanego hasła")
+    @Description("Cel testu: Potwierdzenie czy walidowana jest długość wprowadzanego hasła")
     @Severity(SeverityLevel.NORMAL)
-    public void checkIfDangerMessageIsDisplayed(){
+    public void checkIfDangerMessageIsDisplayed() {
         final String FIRST_NAME = "JANUSZ";
         final String LAST_NAME = "KOWALSKI";
         DriverUtils.navigateToPage(REGISTRATION_URL);

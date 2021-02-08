@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!--<suite name="PHP Travels Test">-->
-    <suite name="PHP Travels Test" parallel="tests" thread-count="2">
+<suite name="PHP Travels Test" parallel="tests" thread-count="2">
 
     <listeners>
         <listener class-name="utils.testng.listeners.TestListener"/>
@@ -37,11 +37,4 @@
             <class name="tests.login.PositiveLoginTest"/>
         </classes>
     </test>
-
-    <test name="Correct move from Home Page to login page test">
-            <classes>
-                <class name="tests.login.MoveFromHomePageToLoginPage"/>
-            </classes>
-        </test>
-
 </suite>

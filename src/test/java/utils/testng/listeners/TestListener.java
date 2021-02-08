@@ -39,12 +39,10 @@ public class TestListener implements ITestListener {
         ScreenShotMaker.makeScreenShot();
     }
 
-    //Metoda onStart nie otrzymała żadnej implementacji, aby nie zaśmiecać logu zbyt dużą ilością informacji
     @Override
     public void onStart(ITestContext context) {
     }
 
-    //Metoda onFinish nie otrzymała żadnej implementacji, aby nie zaśmiecać logu zbyt dużą ilością informacji
     @Override
     public void onFinish(ITestContext context) {
     }
