@@ -8,31 +8,32 @@
         <listener class-name="utils.testng.listeners.AnnotationTransformer"/>
     </listeners>
 
-    <test name="Positive Registration Test">
-        <classes>
-            <class name="tests.registration.RegistrationPositiveTest"/>
-        </classes>
-    </test>
+<!--    <test name="Positive Registration Test">-->
+<!--        <classes>-->
+<!--            <class name="tests.registration.RegistrationPositiveTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Validate if user can register more than one times">
-        <classes>
-            <class name="tests.registration.ValidateIfUserCanRegisterMoreThanOneTimes"/>
-        </classes>
-    </test>
+<!--    <test name="Validate if user can register more than one times">-->
+<!--        <classes>-->
+<!--            <class name="tests.registration.ValidateIfUserCanRegisterMoreThanOneTimes"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Validate if confirm password is the same">
-        <classes>
-            <class name="tests.registration.ValidateIsConfirmPasswordIsTheSame"/>
-        </classes>
-    </test>
+<!--    <test name="Validate if confirm password is the same">-->
+<!--        <classes>-->
+<!--            <class name="tests.registration.ValidateIsConfirmPasswordIsTheSame"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Validate length of password ">
-        <classes>
-            <class name="tests.registration.ValidateLengthOfPassword"/>
-        </classes>
-    </test>
+<!--    <test name="Validate length of password ">-->
+<!--        <classes>-->
+<!--            <class name="tests.registration.ValidateLengthOfPassword"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="Correct login test">
+        <parameter name="email" value="janusz.kowalski@gmail.com"/>
         <classes>
             <class name="tests.login.PositiveLoginTest"/>
         </classes>
