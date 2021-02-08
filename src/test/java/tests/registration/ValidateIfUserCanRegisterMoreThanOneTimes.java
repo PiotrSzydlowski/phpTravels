@@ -16,7 +16,6 @@ public class ValidateIfUserCanRegisterMoreThanOneTimes extends TestBase {
     @Description("Cel testu: Potwierdzenie czy w przypadku próby zarejestrowania użytkownika z istniejącym już " +
             "zarejestrowanego wyświetlany jest komunikat ")
     @Severity(SeverityLevel.NORMAL)
-    @TmsLink("Id-2")
     public void checkIfDangerMessageIsDisplayed(){
         final String FIRST_NAME = "JANUSZ";
         final String LAST_NAME = "KOWALSKI";

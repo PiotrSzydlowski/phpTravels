@@ -15,7 +15,6 @@ public class ValidateIsConfirmPasswordIsTheSame extends TestBase {
     @Test
     @Description("Cel testu: Potwierdzenie walidacji jednakowych haseł w polach Password i Confirm Password ")
     @Severity(SeverityLevel.CRITICAL)
-    @TmsLink("Id-5")
     public void checkIfDangerMessageIsDisplayedAfterTypeIncorrectConfirmPassword(){
         final String FIRST_NAME = "JANUSZ";
         final String LAST_NAME = "KOWALSKI";

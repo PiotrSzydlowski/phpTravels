@@ -15,7 +15,6 @@ public class ValidateLengthOfPassword extends TestBase {
     @Test
     @Description("Cel testu: Potwierdzenie czy system waliduje długość wprowadzanego hasła")
     @Severity(SeverityLevel.NORMAL)
-    @TmsLink("Id-3")
     public void checkIfDangerMessageIsDisplayed(){
         final String FIRST_NAME = "JANUSZ";
         final String LAST_NAME = "KOWALSKI";
