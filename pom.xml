@@ -31,11 +31,13 @@
             <version>${aspectj.version}</version>
         </dependency>
         <!--Biblioteka Allure-->
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.10.0</version>
+            <version>2.13.8</version>
         </dependency>
+
         <!--Stare zależności projektowe takie jak Selenium czy TestNG-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
