@@ -17,18 +17,18 @@ pipeline {
                  bat 'docker-compose down' // Wyłączenie Docker Selenium, wyłączenie kontenerów
             }
         }
-//         stage('Generate allure report') {
-//             steps {
-//                 script {
-//                     allure([
-//                             includeProperties: false,
-//                             jdk              : '',
-//                             properties       : [],
-//                             reportBuildPolicy: 'ALWAYS',
-//                             results          : [[path: 'target/allure-results']]
-//                     ])
-//                 }
-//             }
-//         }
+        stage('Generate allure report') {
+            steps {
+                script {
+                    allure([
+                            includeProperties: false,
+                            jdk              : '',
+                            properties       : [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results          : [[path: 'target/allure-results']]
+                    ])
+                }
+            }
+        }
     }
 }
